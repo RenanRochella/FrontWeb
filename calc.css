@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --var1: #191825;
+    --var2: #865DFF;
+    --var3: #E384FF;
+    --var4: #FFA3FD;
+    --var5: #000000;
+    --var6: #ffffff;
+}
+
+body{
+    background-color: var(--var5);
+    display: flex;
+    text-align: center;
+}
+
+.container{
+    position: relative;
+    transform: translateY(20vh);
+    width: 70vw;
+    padding: 5rem 0;
+    display: table-column;
+    border-radius: 10px;
+    margin: auto;
+    background-color: var(--var1);
+}
+
+.box-input{
+    margin: 1rem;
+}
+
+span{
+    width: 30px;
+    font-size: 20px;
+    text-align: center;
+    padding: 3px;
+    border-radius: 5px;
+    color: var(--var6);
+    background-color: var(--var2);
+}
+
