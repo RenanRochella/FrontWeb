@@ -3,15 +3,24 @@ const secNumber = document.getElementById("number2");
 
 const result = document.getElementById("result");
 
-function calculo(operacao){
+function calculo(operacao) {
 
-    const finalResult = eval("Number(fistNumber.value)"+ operacao +"Number(secNumber.value)")
+    try {
+        const finalResult = eval("Number(fistNumber.value)" + operacao + "Number(secNumber.value)")
+        if (isNaN(finalResult) || !isFinite(finalResult)) {
+            alert("Algo de errado não está certo!!!!")
+            return
+        }
+        result.textContent = finalResult
+        if(finalResult >= 100){
+            result.style.color = "green"
+        }else if(finalResult >= 50){
+            result.style.color = "blue"
+        }if(finalResult <= 0){
+            result.style.color = "red"
+        }
 
-    if(isNaN(finalResult)){
-        alert("Algo de errado não está certo!!!!")
-        return
+    } catch (error) {
+        alert(error)
     }
-
-    result.textContent = finalResult
-
 }
