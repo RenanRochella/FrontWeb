@@ -44,3 +44,11 @@ span{
     background-color: var(--var2);
 }
 
+input{
+    background-color: var(--var2);
+    color: var(--var3);
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    padding: 3px;
+}

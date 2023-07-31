@@ -5,32 +5,13 @@ const result = document.getElementById("result");
 
 function calculo(operacao){
 
-    if(operacao === "somar"){
-        
-        result.textContent = 
-        Number(fistNumber.value) 
-        + Number(secNumber.value)
+    const finalResult = eval("Number(fistNumber.value)"+ operacao +"Number(secNumber.value)")
 
-    } else if(operacao === "sub"){
-
-        result.textContent = 
-        Number(fistNumber.value) 
-        - Number(secNumber.value)
-        
-    } else if(operacao === "mult"){
-
-        result.textContent = 
-        Number(fistNumber.value) * 
-        Number(secNumber.value)
-        
-    } else if(operacao === "divd"){
-
-        result.textContent = 
-        Number(fistNumber.value) 
-        / Number(secNumber.value)
-        
-    } else{
-        alert("Não conheço . . .")
+    if(isNaN(finalResult)){
+        alert("Algo de errado não está certo!!!!")
+        return
     }
+
+    result.textContent = finalResult
 
 }
